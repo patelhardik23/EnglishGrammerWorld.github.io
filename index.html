@@ -1,5 +1,86 @@
+<!DOCTYPE html>
 <html>
-<body>
-<embed src="pdf/1.English spelling rules-converted.pdf" width="100%" height = "100%"/>
-</body>
+    <head>
+        <script>
+            function myFunction(value) {
+                var x = document.getElementById(value);
+
+                x.style.display = "block";
+                $('#book').children().hide();
+                $('#' + value).show();
+
+            }
+        </script>
+        <style>
+            .vertical-menu {
+                width: 200px; /* Set a width if you like */
+            }
+
+            .vertical-menu a {
+                background-color: #eee; /* Grey background color */
+                color: black; /* Black text color */
+                display: block; /* Make the links appear below each other */
+                padding: 12px; /* Add some padding */
+                text-decoration: none; /* Remove underline from links */
+            }
+
+            .vertical-menu a:hover {
+                background-color: #ccc; /* Dark grey background on mouse-over */
+            }
+
+            .vertical-menu a.active {
+                background-color: #04AA6D; /* Add a green color to the "active/current" link */
+                color: white;
+            }
+            .content{
+                width: 99%;
+                height: 99vh;
+                min-height: 50%;
+                float: left;
+                margin-left: 1%;
+                display: none;
+            }
+            .chap{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <title>English World</title>
+    </head>
+
+    <body>
+        <div style="width: 100%;height: 100%;min-height: 100%">
+            <div class="vertical-menu" style="width: 25%;height: 100%; float: left;background-color: brown" >
+
+                <a href="#chapter1" onclick="myFunction('chapter1')" class="active">1.English spelling rules-converted</a>
+
+                <a href="#chapter2" onclick="myFunction('chapter2')" class="">2. Noun and pronoun-converted</a>
+
+                <a href="#chapter3" onclick="myFunction('chapter3')" class="">3. Verb and auxiliary verbs-converted</a>
+
+                <a href="#chapter4" onclick="myFunction('chapter4')" class="">4. Uses of the verb- Get, Have & Do-converted</a>
+
+                <a href="#chapter5" onclick="myFunction('chapter5')" class="">5. Modal verbs-converted</a>
+
+            </div>
+            <div id = "book" style="height: 100%;width: 75%; float: right">
+                <div id = "chapter1" class="content" style="display: block;">
+                    <embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/>
+                </div>
+                <div id = "chapter2" class="content">
+                    <embed class="chap" src="pdf/2. Noun and pronoun-converted.pdf"/>
+                </div>
+                <div id = "chapter3" class="content">
+                    <embed class="chap" src="pdf/3. Verb and auxiliary verbs-converted.pdf.pdf"/>
+                </div>
+                <div id = "chapter4" class="content">
+                    <embed class="chap" id = "chapter4" src="pdf/4. Uses of the verb- Get, Have & Do-converted.pdf"/>
+                </div>
+                <div id = "chapter5" class="content">
+                    <embed class="chap" id = "chapter5" src="pdf/5. Modal verbs-converted.pdf"/>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
+
