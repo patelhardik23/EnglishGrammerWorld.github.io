@@ -15,11 +15,20 @@
         <style>
             .vertical-menu {
                 width: 200px; /* Set a width if you like */
+                background-color: #eee;/* Grey background color */
+
+                height: 98vh;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                overflow-x: hidden;
+                padding-top: 5px;
             }
 
             .vertical-menu a {
-                background-color: #eee; /* Grey background color */
                 color: black; /* Black text color */
+                font-size: 16px ;
                 display: block; /* Make the links appear below each other */
                 padding: 12px; /* Add some padding */
                 text-decoration: none; /* Remove underline from links */
@@ -34,72 +43,81 @@
                 color: white;
             }
             .content{
-                width: 99%;
-                height: 290vh;
+                width: 100%;
+                height: 98vh;
                 min-height: 100%;
                 float: left;
-                margin-left: 1%;
                 display: none;
             }
             .chap{
                 width: 100%;
                 height: 100%;
+                background-color: white;
+            }
+            .one{
+                background-color: #3FC1C9;
+            }
+            .two {
+                background-color: #F5F5F5;
+            }
+            .bookContent{
+                width: 74%; 
+                float: right;
+                margin-left: 10px;
+                margin-top: 0px;
+                padding-top: 0px;
             }
         </style>
         <title>English World</title>
     </head>
 
     <body>
-        <div style="width: 100%;height: 100%;min-height: 100%">
-            <div class="vertical-menu" style="width: 25%;height: 100%; float: left;background-color: brown" >
-
-                <a href="#chapter1" onclick="myFunction('chapter1')" class="active">1.English spelling rules-converted</a>
-                <a href="#chapter2" onclick="myFunction('chapter2')" class="">2. Noun and pronoun-converted</a>
-                <a href="#chapter3" onclick="myFunction('chapter3')" class="">3. Verb and auxiliary verbs-converted</a>
-                <a href="#chapter4" onclick="myFunction('chapter4')" class="">4. Uses of the verb- Get, Have & Do-converted</a>
-                <a href="#chapter5" onclick="myFunction('chapter5')" class="">5. Modal verbs-converted</a>
-                <a href="#chapter6" onclick="myFunction('chapter6')" class="">6. Non-continuous verbs-converted</a>
-                <a href="#chapter7" onclick="myFunction('chapter7')" class="">7.Transitive and intransitive verbs-converted</a>
-                <a href="#chapter8" onclick="myFunction('chapter8')" class="">8. Irregular verbs-converted</a>
-                <a href="#chapter9" onclick="myFunction('chapter9')" class="">9. Phrasal verbs-converted</a>
-                <a href="#chapter10" onclick="myFunction('chapter10')" class="">10. Causative verbs- Let, Make, Have & Get-converted</a>
-                <a href="#chapter11" onclick="myFunction('chapter11')" class="">11.Uses of- used to, be used to & get used to-converted</a>
-                <a href="#chapter12" onclick="myFunction('chapter12')" class="">12. Could have, should have, would have,-converted</a>
-                <a href="#chapter13" onclick="myFunction('chapter13')" class="">13.Conditionals-converted</a>
-                <a href="#chapter14" onclick="myFunction('chapter14')" class="">14.Gerund and infinitive-converted</a>
-                <a href="#chapter15" onclick="myFunction('chapter15')" class="">15.Uses of the verb- wish,need & dare-converted</a>
-                <a href="#chapter16" onclick="myFunction('chapter16')" class="">16. Adjective-converted</a>
-                <a href="#chapter17" onclick="myFunction('chapter17')" class="">17.Preposition-converted</a>
-                <a href="#chapter18" onclick="myFunction('chapter18')" class="">18. Conjunctions & Conjunctive adverbs-converted</a>
-                <a href="#chapter19" onclick="myFunction('chapter19')" class="">19. Article & Interjection-converted</a>
-                <a href="#chapter20" onclick="myFunction('chapter20')" class="">20. Determinders-converted</a>
-                <a href="#chapter21" onclick="myFunction('chapter21')" class="">21. Quantifier-Each & Every, Either & Neither-converted</a>
-                <a href="#chapter22" onclick="myFunction('chapter22')" class="">22. Punctuation-converted</a>
-                <a href="#chapter23" onclick="myFunction('chapter23')" class="">23. Apostrophe sign (‘)-converted</a>
-                <a href="#chapter24" onclick="myFunction('chapter24')" class="">24. Antonyms & Synonyms-converted</a>
-                <a href="#chapter25" onclick="myFunction('chapter25')" class="">25. Gender-converted</a>
-                <a href="#chapter26" onclick="myFunction('chapter26')" class="">26. Sound of animals,bird etc.-converted</a>
-                <a href="#chapter27" onclick="myFunction('chapter27')" class="">27. Sentence type and Sentence structure-converted</a>
-                <a href="#chapter28" onclick="myFunction('chapter28')" class="">28. Verb Tense-converted</a>
-                <a href="#chapter29" onclick="myFunction('chapter29')" class="">29. Reported speech-converted</a>
-                <a href="#chapter30" onclick="myFunction('chapter30')" class="">30. Active voice and Passive voice-converted</a>
-                <a href="#chapter31" onclick="myFunction('chapter31')" class="">31. Degree of comparison-converted</a>
-                <a href="#chapter32" onclick="myFunction('chapter32')" class="">32. Question Tag-converted</a>
-                <a href="#chapter33" onclick="myFunction('chapter33')" class="">33. Collocations-converted</a>
-                <a href="#chapter34" onclick="myFunction('chapter34')" class="">34. Contractions-converted</a>
-                <a href="#chapter35" onclick="myFunction('chapter35')" class="">35. Idioms & Phrases-converted</a>
-                <a href="#chapter36" onclick="myFunction('chapter36')" class="">36. Confusing words-converted</a>
-                <a href="#chapter37" onclick="myFunction('chapter37')" class="">37. Correspondence skill-converted</a>
-                <a href="#chapter38" onclick="myFunction('chapter38')" class="">38. Speaking rules you need to know !-converted</a>
-                <a href="#chapter39" onclick="myFunction('chapter39')" class="">39. Why English is hard for Gujarati student-converted</a>
-                <a href="#chapter40" onclick="myFunction('chapter40')" class="">40. English proverbs-converted</a>
-
+        <div>
+            <div class="vertical-menu" style="width: 25%; float: left;" >
+                <a href="#chapter1" onclick="myFunction('chapter1')" class="one">1.English spelling rules</a>
+                <a href="#chapter2" onclick="myFunction('chapter2')" class="two">2. Noun and pronoun</a>
+                <a href="#chapter3" onclick="myFunction('chapter3')" class="one">3. Verb and auxiliary verbs</a>
+                <a href="#chapter4" onclick="myFunction('chapter4')" class="two">4. Uses of the verb- Get, Have & Do</a>
+                <a href="#chapter5" onclick="myFunction('chapter5')" class="one">5. Modal verbs</a>
+                <a href="#chapter6" onclick="myFunction('chapter6')" class="two">6. Non-continuous verbs</a>
+                <a href="#chapter7" onclick="myFunction('chapter7')" class="one">7.Transitive and intransitive verbs</a>
+                <a href="#chapter8" onclick="myFunction('chapter8')" class="two">8. Irregular verbs</a>
+                <a href="#chapter9" onclick="myFunction('chapter9')" class="one">9. Phrasal verbs</a>
+                <a href="#chapter10" onclick="myFunction('chapter10')" class="two">10. Causative verbs- Let, Make, Have & Get</a>
+                <a href="#chapter11" onclick="myFunction('chapter11')" class="one">11.Uses of- used to, be used to & get used to</a>
+                <a href="#chapter12" onclick="myFunction('chapter12')" class="two">12. Could have, should have, would have,</a>
+                <a href="#chapter13" onclick="myFunction('chapter13')" class="one">13.Conditionals</a>
+                <a href="#chapter14" onclick="myFunction('chapter14')" class="two">14.Gerund and infinitive</a>
+                <a href="#chapter15" onclick="myFunction('chapter15')" class="one">15.Uses of the verb- wish,need & dare</a>
+                <a href="#chapter16" onclick="myFunction('chapter16')" class="two">16. Adjective</a>
+                <a href="#chapter17" onclick="myFunction('chapter17')" class="one">17.Preposition</a>
+                <a href="#chapter18" onclick="myFunction('chapter18')" class="two">18. Conjunctions & Conjunctive adverbs</a>
+                <a href="#chapter19" onclick="myFunction('chapter19')" class="one">19. Article & Interjection</a>
+                <a href="#chapter20" onclick="myFunction('chapter20')" class="two">20. Determinders</a>
+                <a href="#chapter21" onclick="myFunction('chapter21')" class="one">21. Quantifier-Each & Every, Either & Neither</a>
+                <a href="#chapter22" onclick="myFunction('chapter22')" class="two">22. Punctuation</a>
+                <a href="#chapter23" onclick="myFunction('chapter23')" class="one">23. Apostrophe sign (‘)</a>
+                <a href="#chapter24" onclick="myFunction('chapter24')" class="two">24. Antonyms & Synonyms</a>
+                <a href="#chapter25" onclick="myFunction('chapter25')" class="one">25. Gender</a>
+                <a href="#chapter26" onclick="myFunction('chapter26')" class="two">26. Sound of animals,bird etc.</a>
+                <a href="#chapter27" onclick="myFunction('chapter27')" class="one">27. Sentence type and Sentence structure</a>
+                <a href="#chapter28" onclick="myFunction('chapter28')" class="two">28. Verb Tense</a>
+                <a href="#chapter29" onclick="myFunction('chapter29')" class="one">29. Reported speech</a>
+                <a href="#chapter30" onclick="myFunction('chapter30')" class="two">30. Active voice and Passive voice</a>
+                <a href="#chapter31" onclick="myFunction('chapter31')" class="one">31. Degree of comparison</a>
+                <a href="#chapter32" onclick="myFunction('chapter32')" class="two">32. Question Tag</a>
+                <a href="#chapter33" onclick="myFunction('chapter33')" class="one">33. Collocations</a>
+                <a href="#chapter34" onclick="myFunction('chapter34')" class="two">34. Contractions</a>
+                <a href="#chapter35" onclick="myFunction('chapter35')" class="one">35. Idioms & Phrases</a>
+                <a href="#chapter36" onclick="myFunction('chapter36')" class="two">36. Confusing words</a>
+                <a href="#chapter37" onclick="myFunction('chapter37')" class="one">37. Correspondence skill</a>
+                <a href="#chapter38" onclick="myFunction('chapter38')" class="two">38. Speaking rules you need to know !</a>
+                <a href="#chapter39" onclick="myFunction('chapter39')" class="one">39. Why English is hard for Gujarati student</a>
+                <a href="#chapter40" onclick="myFunction('chapter40')" class="two">40. English proverbs</a>
             </div>
-            <div id = "book" style="height: 100%;width: 75%; float: right">
-                <div id = "chapter1" class="content" style="display: block;">
-                    <embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/>
-                </div>
-                <div id = "chapter1" class="content"><embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/></div>
+            <div id = "book" class="bookContent">
+
+                <div id = "chapter1" class="content" style="display: block;"><embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/></div>
                 <div id = "chapter2" class="content"><embed class="chap" src="pdf/2. Noun and pronoun-converted.pdf"/></div>
                 <div id = "chapter3" class="content"><embed class="chap" src="pdf/3. Verb and auxiliary verbs-converted.pdf"/></div>
                 <div id = "chapter4" class="content"><embed class="chap" src="pdf/4. Uses of the verb- Get, Have & Do-converted.pdf"/></div>
