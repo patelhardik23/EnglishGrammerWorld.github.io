@@ -28,6 +28,7 @@
 
             .vertical-menu a {
                 color: black; /* Black text color */
+                font-family: Calibri, sans-serif;
                 font-size: 16px ;
                 display: block; /* Make the links appear below each other */
                 padding: 12px; /* Add some padding */
@@ -74,6 +75,8 @@
     <body>
         <div>
             <div class="vertical-menu" style="width: 25%; float: left;" >
+                <a href="#introduction" onclick="myFunction('introduction')" class="one">Introduction</a>
+                <a href="#index" onclick="myFunction('index')" class="two">Index</a>
                 <a href="#chapter1" onclick="myFunction('chapter1')" class="one">1.English spelling rules</a>
                 <a href="#chapter2" onclick="myFunction('chapter2')" class="two">2. Noun and pronoun</a>
                 <a href="#chapter3" onclick="myFunction('chapter3')" class="one">3. Verb and auxiliary verbs</a>
@@ -116,8 +119,9 @@
                 <a href="#chapter40" onclick="myFunction('chapter40')" class="two">40. English proverbs</a>
             </div>
             <div id = "book" class="bookContent">
-
-                <div id = "chapter1" class="content" style="display: block;"><embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/></div>
+                <div id = "introduction" class="content" style="display: block;"><embed class="chap" src="pdf/Introduction.pdf"/></div>
+                <div id = "index" class="content"><embed class="chap" src="pdf/Index.pdf"/></div>
+                <div id = "chapter1" class="content"><embed class="chap" src="pdf/1.English spelling rules-converted.pdf"/></div>
                 <div id = "chapter2" class="content"><embed class="chap" src="pdf/2. Noun and pronoun-converted.pdf"/></div>
                 <div id = "chapter3" class="content"><embed class="chap" src="pdf/3. Verb and auxiliary verbs-converted.pdf"/></div>
                 <div id = "chapter4" class="content"><embed class="chap" src="pdf/4. Uses of the verb- Get, Have & Do-converted.pdf"/></div>
